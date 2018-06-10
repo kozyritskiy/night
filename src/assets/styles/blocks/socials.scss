@@ -1,0 +1,9 @@
+.socials__icon {
+    width: 25px;
+    height: 25px;
+    fill: $white;
+    transition: 0.4s;
+    &:hover {
+        fill: $blue;
+    }
+}
