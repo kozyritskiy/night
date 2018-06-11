@@ -1,9 +1,20 @@
+.socials__list {
+  display: flex;
+}
+
+.socials__item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .socials__icon {
-    width: 25px;
-    height: 25px;
-    fill: $white;
-    transition: 0.4s;
-    &:hover {
-        fill: $blue;
-    }
+  width: 25px;
+  height: 25px;
+  fill: $white;
+  transition: 0.4s;
+  &:hover {
+    fill: $blue;
+  }
 }

@@ -1,5 +1,48 @@
-.author__icon {
-    fill: $white;
+.author {
+    position: relative;
     width: 460px;
     height: 270px;
+}
+
+.author__bg {
+    position: absolute;
+}
+
+.author__data {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+}
+
+.author__icon {
+    width: 460px;
+    height: 270px;
+}
+
+.author__avatar {
+    width: 140px;
+    margin: 0 auto;
+}
+
+.author__img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.author__name,
+.author__info {
+    text-align: center;
+    font-family: Roboto;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.author__name {
+    font-size: 35px;
+}
+
+.author__info {
+    font-size: 16px;
 }

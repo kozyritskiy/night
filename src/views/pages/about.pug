@@ -14,30 +14,33 @@ block content
                 ['github', 'http://gh.com'],
                 ['in', 'http://in.com']
             ]
-        header.header
+        .socials__hero
             .socials
                 ul.socials__list
                     each item in socials
                         li.socials__item
                             a(href=`${item[1]}`).socials__link
                                 +icon(item[0], 'socials__icon')
-            .hamburger
+        .hamburger__hero
+            .hamburger  
                 a(href="№").hamburger__link
                     +icon('hamburger', 'hamburger__icon')
 
-        .author
-            .author__bg
-                +icon('stars1', 'author__icon')
-            .author__desc
-                .photo
-                    img.photo__img(src="./assets/images/content/avatar.jpg", alt="photo__img")
-                .desc
-                    .desc__name Владимир Астахов
-                    .desc__info Личный сайт разработчика
+        .author__hero
+            .author
+                .author__bg
+                    img(src="./assets/images/svg/stars1.svg", alt="galaxy").author__icon
+                .author__data
+                    .author__avatar
+                        img.author__img(src="./assets/images/content/avatar-small.jpg", alt="photo__img")
+                    .author__desc
+                        .author__name Владимир Астахов
+                        .author__info Личный сайт разработчика
 
-        .down-btn
-            a(href="#").down-btn__link
-                +icon('portf_arrow_down', 'down-btn__icon')
+        .down-btn__hero
+            .down-btn
+                a(href="#").down-btn__link
+                    +icon('portf_arrow_down', 'down-btn__icon')
 
     section.about
         .about__left
