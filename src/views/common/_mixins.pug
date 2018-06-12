@@ -4,3 +4,9 @@ mixin icon(iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin triangles(modClassName)
+  .triangles(class=(modClassName === '') ? '' : `triangles-${modClassName}`)
+    svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangles__svg
+      polygon(points='0,0 0,110 500,110').triangles__svg-left
+      polygon(points='500,110 1000,0 1000,110').triangles__svg-right

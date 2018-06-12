@@ -1,0 +1,20 @@
+.menu {
+  margin-bottom: 25px;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item {
+  padding-right: 40px;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.menu__link {
+  color: #e5e5e6;
+  font-size: 15.77px;
+  font-weight: 700;
+}

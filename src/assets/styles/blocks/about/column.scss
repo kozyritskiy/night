@@ -1,0 +1,24 @@
+.column {
+  width: 100%;
+}
+
+.column__list {
+  width: 100%;
+  display: flex;
+  padding: 30px 0;
+}
+
+.column__item {
+  width: 33%;
+  padding: 0 30px;
+  &:nth-child(2) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.column__item p {
+  color: #b1b2b5;
+  font-size: 16px;
+  font-weight: 300;
+}

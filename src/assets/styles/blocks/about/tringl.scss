@@ -1,0 +1,23 @@
+.triangles {
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+}
+
+.triangles__svg {
+  position: relative;
+  width: 100%;
+  display: block;
+  fill: white;
+}
+
+.triangles-about {
+  .triangles__svg {
+    &-left {
+      fill: $beigelight;
+    }
+    &-right {
+      fill: $beige;
+    }
+  }
+}

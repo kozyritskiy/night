@@ -1,0 +1,23 @@
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-row__list {
+  display: flex;
+}
+
+.skills-row__item {
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.skills-row__title {
+  font-family: Roboto;
+  color: #474b57;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
