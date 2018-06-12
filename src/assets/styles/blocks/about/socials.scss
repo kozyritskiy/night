@@ -1,24 +1,29 @@
 .socials__list {
-    display: flex;
+  display: flex;
+}
+
+.socials__list_pos_center {
+  justify-content: center;
+  margin-top: 35px;
 }
 
 .socials__item {
-    margin-right: 30px;
-    &:last-child {
-        margin-right: 0;
-    }
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .socials__icon {
-    width: 25px;
-    height: 25px;
-    fill: $white;
-    transition: 0.4s;
-    &:hover {
-        fill: $blue;
-    }
+  width: 25px;
+  height: 25px;
+  fill: $white;
+  transition: 0.4s;
+  &:hover {
+    fill: $blue;
+  }
 }
 
 .socials__icon_color_grey {
-    fill: $grey;
+  fill: $grey;
 }

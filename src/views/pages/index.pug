@@ -1,6 +1,38 @@
 extends ../auth.layout.pug
 
+block variables
+    - var titlePage = 'Козырицкий Максим';
+    - var titleSite = 'Личный сайт веб-разработчика';
+
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  section.section.welcome
+    .intro  
+      .intro__welcome
+        .avatar
+          .avatat__data
+            .avatar__pic
+                img.avatar__img(src="./assets/images/content/avatar-small.jpg", alt="photo__img")
+            .avatar__desc
+                .avatar__name #{titlePage}
+                .avatar__info #{titleSite}
+        - 
+          var socials = [
+              ['vk', 'http://vk.com'],
+              ['github', 'http://gh.com'],
+              ['in', 'http://in.com']
+          ]
+        .socials
+          ul.socials__list.socials__list_pos_center
+            each item in socials
+              li.socials__item
+                a(href=`${item[1]}`).socials__link
+                  +icon(item[0], 'socials__icon')
+        nav.nav-welc
+          ul.nav-welc__list 
+            each item in ['Мои работы', "Обо мне", "Блог"]
+              li.nav-welc__item
+                a(href="#").nav-welc__link #{item}    
+      .intro__auth
+    .auth-btn
+      button.button.button_auth Авторизоваться
+    .copyright &copy Максим Козырицкий | Создано в LoftSchool | 2018

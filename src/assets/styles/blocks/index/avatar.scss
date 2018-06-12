@@ -1,0 +1,38 @@
+.avatar {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar__pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar__img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.avatar__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar__name {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 0.8;
+    margin-top: 20px;
+}
+
+.avatar__info {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}

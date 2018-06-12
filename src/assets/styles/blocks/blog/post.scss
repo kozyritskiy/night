@@ -1,0 +1,37 @@
+.post__item {
+  margin-bottom: 70px;
+  border-bottom: 5px solid rgba(55, 62, 66, 0.07);
+  &:last-child {
+    border: none;
+  }
+}
+
+.post__title {
+  margin-bottom: 30px;
+}
+
+.post__title h3 {
+  font-family: Sansus;
+  color: #474b57;
+  font-size: 35.02px;
+  font-weight: 400;
+  line-height: 0.8;
+}
+
+.post__date {
+  color: rgba(8, 60, 150, 0.85);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.post__text {
+  margin-bottom: 70px;
+}
+
+.post__text p {
+  color: #455a64;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}

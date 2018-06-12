@@ -1,0 +1,33 @@
+.nav-welc {
+    margin-top: 40px;
+}
+
+.nav-welc__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-welc__item {
+    width: 100%;
+    background-color: rgba(0, 76, 209, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    &:nth-child(2) {
+        border-right: 2px solid rgba(222, 227, 231, 0.5);
+        border-left: 2px solid rgba(222, 227, 231, 0.5);
+    }
+    &:nth-child(1) {
+        border-bottom-left-radius: 15px;
+    }
+    &:nth-child(3) {
+        border-bottom-right-radius: 15px;
+    }
+}
+
+.nav-welc__link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
