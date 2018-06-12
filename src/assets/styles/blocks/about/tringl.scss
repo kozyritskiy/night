@@ -21,3 +21,14 @@
     }
   }
 }
+
+.triangles-blog {
+  .triangles__svg {
+    &-left {
+      fill: $beige;
+    }
+    &-right {
+      fill: $beige;
+    }
+  }
+}

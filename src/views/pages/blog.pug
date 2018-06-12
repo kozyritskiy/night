@@ -1,0 +1,45 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Блог';
+    - var titlePage = 'БЛОГ';
+    - var titleSite = 'Статьи, которые я написал';
+
+block scripts
+    script(src='about.bundle.js')
+
+block content
+    section.section.hero
+        include ../common/header
+    section.section.blog
+        - 
+            var post = [
+                'Самое важное в SASS', 
+                "Самое важное в SASS", 
+                "Самое важное в SASS", 
+                "Самое важное в SASS Самое важное в SASS Самое важное в SASS"
+            ]
+        +triangles('blog')
+        .blog-column
+            .blog-column__nav
+                nav.blog-menu  
+                    ul.blog-menu__list
+                        each item in post
+                            li.blog-menu__item
+                                a(href="#").blog-menu__link #{item} 
+            .blog-column__article
+                .post
+                    ul.post__list
+                        each item in post
+                            li.post__item
+                                .post__title
+                                    h3 #{item}
+                                .post__date 22 ноября 2018
+                                .post__text 
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe veritatis impedit expedita unde. Sapiente sed dolorum eligendi dolore, ex, natus nam magni eius sit, ad cum quidem! Laboriosam, ut?
+                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem rerum ipsam minus hic quis ducimus distinctio quae molestiae, reiciendis aspernatur similique vero. Veritatis reprehenderit, nam tempore eveniet quos sint error?
+
+            .blog-column__empty 
+        include ../common/footer
+
+
