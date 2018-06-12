@@ -21,6 +21,12 @@ block content
               ['github', 'http://gh.com'],
               ['in', 'http://in.com']
           ]
+        - 
+          var welc = [
+              ['Мои работы', '#'],
+              ['Обо мне', './about.html'],
+              ['Блог', './blog.html']
+          ]
         .socials
           ul.socials__list.socials__list_pos_center
             each item in socials
@@ -29,9 +35,9 @@ block content
                   +icon(item[0], 'socials__icon')
         nav.nav-welc
           ul.nav-welc__list 
-            each item in ['Мои работы', "Обо мне", "Блог"]
+            each item in welc
               li.nav-welc__item
-                a(href="#").nav-welc__link #{item}    
+                a(href=`${item[1]}`).nav-welc__link #{item[0]}    
       .intro__auth
     .auth-btn
       button.button.button_auth Авторизоваться
