@@ -64,6 +64,7 @@
 .user-description__title {
     margin-bottom: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -74,8 +75,7 @@
     font-size: 35px;
     font-weight: 400;
     text-transform: uppercase;
-    display: inline-block;
-    border-bottom: 3px solid rgba(71, 75, 87, 0.5);
+    display: flex;
     padding-bottom: 15px;
 }
 
@@ -100,7 +100,9 @@
 
 .about__right-title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
 }
 
@@ -113,4 +115,11 @@
 
 .about__right-description {
     margin-bottom: 55px;
+}
+
+hr {
+    border: none;
+    background-color: rgba(71, 75, 87, 0.5);
+    width: 89px;
+    height: 3px;
 }
