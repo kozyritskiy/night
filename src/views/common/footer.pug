@@ -6,9 +6,9 @@
       li.column__item
         nav.menu
           ul.menu__list
-            each item in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
+            each item in works
               li.menu__item
-                a(href="#").menu__link #{item}
+                a(href=`${item[1]}`).menu__link #{item[0]}
         .socials
           ul.socials__list
             each item in socials
