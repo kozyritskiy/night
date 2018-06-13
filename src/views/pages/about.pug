@@ -73,8 +73,10 @@ block content
                         each item in contacts
                             li.contacts__item
                                 .contacts__icon
-                                    +icon(item[0], 'contacts__icon-img')
-                                    .contacts__titles #{item[1]}
+                                    a(href=`${item[1]}`).contacts__link
+                                        +icon(item[0], 'contacts__icon-img')
+                                        .contacts__titles #{item[1]}
+                                         
         footer.footer
             include ../common/footer
 
