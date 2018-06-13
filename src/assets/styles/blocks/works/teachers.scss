@@ -1,0 +1,55 @@
+.teachers__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teachers__item {
+  width: 375px;
+  margin-right: 25px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.teacher__avatar {
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.teacher__img {
+  object-fit: cover;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.teacher__review {
+  margin-bottom: 30px;
+}
+
+.teacher__review p {
+  color: rgba(255, 255, 255);
+  font-size: 16px;
+  font-style: italic;
+  text-align: left;
+}
+
+.teacher__name,
+.teacher__profession {
+  color: rgba(255, 255, 255);
+  font-size: 16px;
+  text-align: center;
+}
+
+.teacher__name {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.teacher__profession {
+  font-style: italic;
+}

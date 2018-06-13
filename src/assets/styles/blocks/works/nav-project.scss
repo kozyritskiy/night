@@ -1,0 +1,18 @@
+.nav-project {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projects__down {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+.projects__up {
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+}

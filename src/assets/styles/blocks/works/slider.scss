@@ -1,0 +1,15 @@
+.slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.slider__left {
+  background-color: #f2f0e8;
+  width: 100%;
+}
+
+.slider__right {
+  background-color: darkcyan;
+  width: 100%;
+}

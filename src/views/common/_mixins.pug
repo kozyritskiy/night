@@ -10,3 +10,9 @@ mixin triangles(modClassName)
     svg(viewBox='0 0 1000 110' preserveAspectRatio='none').triangles__svg
       polygon(points='0,0 0,110 500,110').triangles__svg-left
       polygon(points='500,110 1000,0 1000,110').triangles__svg-right
+
+mixin trapezoid(modClassName)
+  .trapezoid(class=(modClassName === '') ? '' : `triangles-${modClassName}`)
+    svg(viewBox='0 0 1000 200' preserveAspectRatio='none').trapezoid__svg
+      polygon(points='0,0 0,200 500,200 500,100').trapezoid__svg-left
+      polygon(points='500,200 500,100 1000,0 1000,200').trapezoid__svg-right

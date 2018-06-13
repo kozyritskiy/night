@@ -1,0 +1,79 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Блог';
+    - var titlePage = 'Максим Козырицкий';
+    - var titleSite = 'Личный сайт разработчика';
+
+block scripts
+    script(src='about.bundle.js')
+
+block content
+    section.section.hero
+        include ../common/header
+        .hero__works
+            .work-title
+                h1.work-title__title Мои работы
+                img(src="./assets/images/svg/stars2.1.svg", alt="galaxy").work-title__img
+        
+    section.section.slider
+        +trapezoid('works')
+        .slider__left
+        .slider__right
+            .projects
+                .projects__show
+                .porjects__nav
+                    .nav-project
+                        .projects__down
+                        .projects__up
+        
+    section.feedback
+        h1.feedback__title что обо мне говорят  
+        .feedback__teachers 
+            .teachers
+                ul.teachers__list
+                    li.teachers__item
+                        .teacher
+                            .teacher__avatar
+                                img(src="./assets/images/content/dima.jpg", alt="").teacher__img
+                            .teacher__review
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, laborum sequi nemo a repudiandae magni ut dignissimos molestiae distinctio praesentium!
+                            .teacher__name Ковальчук Дмитрий
+                            .teacher__profession основатель школы
+                    li.teachers__item
+                        .teacher
+                            .teacher__avatar
+                                img(src="./assets/images/content/vova.jpg", alt="").teacher__img
+                            .teacher__review
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, laborum sequi nemo a repudiandae magni ut dignissimos molestiae distinctio praesentium!
+                            .teacher__name Сабанцев Владимир
+                            .teacher__profession основатель школы
+
+        .feedback__communication
+            h2.title-fb связаться со мной
+            hr.feedback__hr
+            form(action="" method="").form-fb
+                fieldset.form-fb__fs
+                    .name-fb
+                        input(required type="text" name="name-fb").name-fb__input#name 
+                        label(for="name-fb").name-fb__label Имя
+                    .email-fb
+                        input(required type="email" name="email-fb").email-fb__input#email 
+                        label(for="email").name-fb__label Email
+                    .comment-fb
+                        textarea(name="comment").comment-fb__area#comment
+                        label(for="comment").comment-fb__label Ваше сообщение
+                .form-fb__buttons
+                    button(type="submit").button.button_submit Отправить
+                    button(type="reset").button.button_clear Очистить
+
+        .feedback__btn
+            .up-btn
+                a(href="#").up-btn__link
+                    +icon('portf_arrow_up', 'up-btn__icon')
+        footer.footer-blog
+            include ../common/footer
+
+                  
+
+
