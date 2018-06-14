@@ -6,4 +6,9 @@
   font-weight: 500;
   border: 1px solid #fff;
   border-radius: 25px;
+  transition: 0.4s;
+  &:hover {
+    background-color: rgb(8, 60, 150);
+    border-color: rgb(8, 60, 150);
+  }
 }
