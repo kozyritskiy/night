@@ -11,6 +11,10 @@ block scripts
 block content
     section.section.hero
         include ../common/header
+        .down-btn__hero
+            .down-btn
+                a(href="#").down-btn__link
+                    +icon('portf_arrow_down', 'down-btn__icon')
     section.section.about
         +triangles('about') 
         .about__left
@@ -35,25 +39,7 @@ block content
             .about__right-description.text-content
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit mollitia nemo reprehenderit ipsam corrupti deleniti, blanditiis sit magni fuga eveniet hic sint illo? Quae harum voluptatem optio ipsum blanditiis. 
             .about__right-content
-                - 
-                    var skills = [
-                        ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-                        ['Backend', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-                        ['Workflow', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-                    ]
-
-                ul.skills-list
-                    each skillsrow in skills
-                        li.skills-list__item.skills-row
-                            .skills-row__title #{skillsrow[0]}
-                            ul.skills-row__list
-                                each skill in skillsrow[1]
-                                    li.skills-row__item
-                                        figure.skill(data-percents="70")
-                                            svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                                                circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                                                circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                                            .skill__title #{skill[0]}
+                +skill(skills)
     section.section.map
         .google-map
         .map__data
@@ -62,20 +48,7 @@ block content
                     .block-subtitle.block-subtitle_contacts Контакты
                     hr
                 .contacts__data
-                    ul.contacts__list
-                        - 
-                            var contacts = [
-                                ['skype', 'skype_kdn'],
-                                ['phone_n', '+7 342 23 23'],
-                                ['envelope_n', 'astahov@gmail.com'],
-                                ['map_n', 'Minsk, Pushna 23']
-                            ]
-                        each item in contacts
-                            li.contacts__item
-                                .contacts__icon
-                                    a(href=`${item[1]}`).contacts__link
-                                        +icon(item[0], 'contacts__icon-img')
-                                        .contacts__titles #{item[1]}
+                    +contacts('contacts', contacts)
                                          
         footer.footer
             include ../common/footer

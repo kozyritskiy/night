@@ -17,4 +17,8 @@
   color: #e5e5e6;
   font-size: 15.77px;
   font-weight: 700;
+  transition: 0.4s;
+  &:hover {
+    color: white;
+  }
 }

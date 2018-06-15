@@ -53,24 +53,6 @@
     fill: #c4cbcd;
 }
 
-.login__wrap,
-.password__wrap {
-    width: 100%;
-    position: relative;
-    >label {
-        opacity: 0.3;
-        position: absolute;
-        top: 30%;
-        left: 15px;
-        color: #0548be;
-        font-size: 16px;
-        font-weight: 400;
-    }
-}
-
-.login__label,
-.password__label {}
-
 .login__input,
 .password__input {
     width: 100%;
@@ -229,4 +211,18 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+}
+
+.login__wrap,
+.password__wrap {
+    width: 100%;
+    position: relative;
+    >label {
+        opacity: 0.3;
+        position: absolute;
+        top: 30%;
+        left: 15px;
+        font-size: 16px;
+        font-weight: 400;
+    }
 }

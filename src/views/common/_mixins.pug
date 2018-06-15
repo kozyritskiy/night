@@ -16,3 +16,110 @@ mixin trapezoid(modClassName)
     svg(viewBox='0 0 1000 200' preserveAspectRatio='none').trapezoid__svg
       polygon(points='0,0 0,200 500,200 500,100').trapezoid__svg-left
       polygon(points='500,200 500,100 1000,0 1000,200').trapezoid__svg-right
+
+mixin nav(className, items, activeItem)
+  nav(class=`${className}`)
+    ul(class=`${className}__list`)
+      each item, ndx in items
+        li(class=`${className}__item` + ( (ndx === activeItem) ? ` ${className}__item_active` : '' ) )
+          a(class=`${className}__link` href='#') #{item[0]}
+
+mixin navWelcome(className, items)
+  nav(class=`${className}`)
+    ul(class=`${className}__list`)
+      each item in items
+        li(class=`${className}__item`)
+          a(class=`${className}__link` href=`${item[1]}`) #{item[0]}
+
+mixin post(className, items)
+  ul(class=`${className}__list`)
+    each item in items
+      li(class=`${className}__item`)
+        .post__title
+          h3 #{item[0]}
+        time.post__date #{item[1]}
+        .post__text 
+          p #{item[2]}
+          p #{item[3]}
+
+mixin socials(className, items)
+  ul(class=`${className}__list`)
+    each item in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href=`${item[1]}`) 
+          +icon(item[0], 'socials__icon')
+
+mixin socialsIndex(className, items)
+  ul(class=`${className}__list` + ` ${className}__list_pos_center`)
+    each item in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href=`${item[1]}`) 
+          +icon(item[0], 'socials__icon')
+
+mixin socialsFooter(className, items)
+  ul(class=`${className}__list`)
+    each item in items
+      li(class=`${className}__item`)
+        a(class=`${className}__link` href=`${item[1]}`)
+          +icon(item[0], 'socials__icon socials__icon_color_grey')
+
+mixin contact(className, items)
+  ul(class=`${className}__list`)
+    each item in items
+      li(class=`${className}__item`)
+        span(class=`${className}__span`) #{item}
+
+mixin contacts(className, items)
+  ul(class=`${className}__list`)
+    each item in items
+      li(class=`${className}__item`)
+        div(class=`${className}__icon`)
+          a(class=`${className}__link` href=`${item[1]}`)
+            +icon(item[0], 'contacts__icon-img')
+            div(class=`${className}__title`) #{item[1]}
+
+mixin works(className, items)
+  nav(class=`${className}`)
+    ul(class=`${className}__list`)
+      each item in items
+        li(class=`${className}__item`)
+          a(class=`${className}__link` href=`${item[1]}`) #{item[0]}
+
+mixin teacher(className,classNameChild, items, images)
+  ul(class=`${className}__list`)
+    - for(var i = 0; i < items.length; i++)
+      li(class=`${className}__item`)
+        div(class=`${classNameChild}`)
+          div(class=`${classNameChild}__avatar`)
+            - for(var j = i; j < images.length; j=j+images.length)
+              +image(`${images[j]}`,'teacher','teacher__img')
+          div(class=`${classNameChild}__review`)
+            p #{items[i][0]}
+          div(class=`${classNameChild}__name`) #{items[i][1]}
+          div(class=`${classNameChild}__profession`) #{items[i][2]}
+
+mixin skill(skills)
+  ul.skills-list
+    each skillsrow in skills
+      li.skills-list__item.skills-row
+        .skills-row__title #{skillsrow[0]}
+        ul.skills-row__list
+          each skill in skillsrow[1]
+            li.skills-row__item
+              figure.skill(data-percents="70")
+                svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                  circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                  circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                .skill__title #{skill[0]}
+
+
+
+// +nav('blog-menu', post)
+// +post('post', post)
+// +socials('socials', socials)
+// +contact('data-contact', contact)
+// +works('menu', works)
+// +contacts('contacts', contacts)
+// +teacher('teachers','teacher', teacher, image)
+// +navWelcome('nav-welc', welc)
+// +skill(skills)

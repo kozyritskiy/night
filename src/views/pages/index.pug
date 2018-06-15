@@ -15,29 +15,9 @@ block content
             .avatar__desc
                 .avatar__name #{titlePage}
                 .avatar__info #{titleSite}
-        - 
-          var socials = [
-              ['vk', 'http://vk.com'],
-              ['github', 'http://gh.com'],
-              ['in', 'http://in.com']
-          ]
-        - 
-          var welc = [
-              ['Мои работы', './works.html'],
-              ['Обо мне', './about.html'],
-              ['Блог', './blog.html']
-          ]
-        .socials
-          ul.socials__list.socials__list_pos_center
-            each item in socials
-              li.socials__item
-                a(href=`${item[1]}`).socials__link
-                  +icon(item[0], 'socials__icon')
-        nav.nav-welc
-          ul.nav-welc__list 
-            each item in welc
-              li.nav-welc__item
-                a(href=`${item[1]}`).nav-welc__link #{item[0]}    
+       
+        +socialsIndex('socials', socials)
+        +navWelcome('nav-welc', welc)    
       .intro__auth
         h2.auth-title авторизуйтесь
         form(action="" method="").form-auth

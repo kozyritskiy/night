@@ -1,23 +1,6 @@
-- 
-    var socials = [
-        ['vk', 'http://vk.com'],
-        ['github', 'http://gh.com'],
-        ['in', 'http://in.com']
-    ]
-- 
-    var works = [
-        ['Мои работы', './works.html'],
-        ['Обо мне', './about.html'],
-        ['Блог', './blog.html'],
-        ['Авторизация', './index.html']
-    ]
 .socials__hero
     .socials
-        ul.socials__list
-            each item in socials
-                li.socials__item
-                    a(href=`${item[1]}`).socials__link
-                        +icon(item[0], 'socials__icon')
+        +socials('socials', socials)
 .hamburger__hero
     .hamburger  
         a(href="№").hamburger__link
@@ -34,7 +17,3 @@
                 .author__name.author__name_blog #{titlePage}
                 .author__info #{titleSite}
 
-.down-btn__hero
-    .down-btn
-        a(href="#").down-btn__link
-            +icon('portf_arrow_down', 'down-btn__icon')

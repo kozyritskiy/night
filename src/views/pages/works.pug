@@ -11,6 +11,11 @@ block scripts
 block content
     section.section.hero
         include ../common/header
+        .down-btn__works
+            .down-btn
+                a(href="#").down-btn__link
+                    +icon('portf_arrow_down', 'down-btn__icon')
+
         .hero__works
             .work-title
                 h1.work-title__title Мои работы
@@ -31,23 +36,7 @@ block content
         h1.feedback__title что обо мне говорят  
         .feedback__teachers 
             .teachers
-                ul.teachers__list
-                    li.teachers__item
-                        .teacher
-                            .teacher__avatar
-                                img(src="./assets/images/content/dima.jpg", alt="").teacher__img
-                            .teacher__review
-                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, laborum sequi nemo a repudiandae magni ut dignissimos molestiae distinctio praesentium!
-                            .teacher__name Ковальчук Дмитрий
-                            .teacher__profession основатель школы
-                    li.teachers__item
-                        .teacher
-                            .teacher__avatar
-                                img(src="./assets/images/content/vova.jpg", alt="").teacher__img
-                            .teacher__review
-                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, laborum sequi nemo a repudiandae magni ut dignissimos molestiae distinctio praesentium!
-                            .teacher__name Сабанцев Владимир
-                            .teacher__profession основатель школы
+                +teacher('teachers','teacher', teacher, image)
 
         .feedback__communication
             h2.title-fb связаться со мной

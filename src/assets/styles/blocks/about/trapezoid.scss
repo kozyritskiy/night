@@ -1,13 +1,13 @@
 .trapezoid {
-  position: absolute;
-  bottom: 100%;
-  width: 100%;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
 }
 
 .trapezoid__svg {
-  position: relative;
-  width: 100%;
-  display: block;
-  fill: #101426;
-  stroke: #101426;
+    position: relative;
+    width: 100%;
+    display: block;
+    fill: rgba(6, 7, 26, 0.7);
+    stroke: rgba(6, 7, 26, 0.7);
 }

@@ -3,6 +3,7 @@
     height: 395px;
     border-radius: 15px;
     position: relative;
+    overflow: hidden;
     perspective: 1000px;
     &:hover .intro__welcome {
         transform: rotateY(180deg);
