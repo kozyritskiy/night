@@ -33,15 +33,22 @@
 .author__name,
 .author__info {
     text-align: center;
-    font-family: Roboto;
-    color: #ffffff;
-    font-weight: 500;
+    color: rgba(255, 255, 255);
 }
 
 .author__name {
     font-size: 35px;
+    font-weight: 500;
 }
 
 .author__info {
     font-size: 16px;
+    font-weight: 400;
+}
+
+.author__name_blog {
+    font-family: Sansus;
+    color: #ffffff;
+    font-size: 63px;
+    font-weight: 400;
 }

@@ -11,6 +11,16 @@ block scripts
 block content
     section.section.hero
         include ../common/header
+        .author__hero
+            .author
+                .author__bg
+                    img(src="./assets/images/svg/stars1.svg", alt="galaxy").author__icon
+                .author__data
+                    .author__avatar
+                        img.author__img(src="./assets/images/content/avatar-small.jpg", alt="photo__img")
+                    .author__desc
+                        .author__name #{titlePage}
+                        .author__info #{titleSite}
         .down-btn__works
             .down-btn
                 a(href="#").down-btn__link
