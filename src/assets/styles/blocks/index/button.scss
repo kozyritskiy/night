@@ -1,14 +1,16 @@
 .button_auth {
-  padding: 15px 30px;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
-  border: 1px solid #fff;
-  border-radius: 25px;
-  transition: 0.4s;
-  &:hover {
-    background-color: rgb(8, 60, 150);
-    border-color: rgb(8, 60, 150);
-  }
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    transition: 0.4s;
+    outline: none;
+    &:hover {
+        background-color: rgb(8, 60, 150);
+        border-color: rgb(8, 60, 150);
+        outline: none;
+    }
 }

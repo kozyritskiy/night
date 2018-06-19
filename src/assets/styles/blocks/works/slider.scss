@@ -1,15 +1,51 @@
 .slider {
-  position: relative;
-  display: grid;
-  grid-template-columns: 50% 50%;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 750px 225px;
+    grid-template-areas: "left right-top right-top" "left r-bot-l r-bot-r";
+    @include tablets {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 550px 270px 225px;
+        grid-template-areas: "top top" "mid mid" "bot-l bot-r";
+    }
+    @include phones {
+        grid-template-rows: 350px 200px 150px;
+    }
+    @include small-phones {
+        grid-template-rows: 260px 220px 100px;
+    }
 }
 
 .slider__left {
-  background-color: #f2f0e8;
-  width: 100%;
+    background-color: #f2f0e8;
+    grid-area: left;
+    @include tablets {
+        grid-area: mid;
+    }
 }
 
 .slider__right {
-  background-color: darkcyan;
-  width: 100%;
+    background-color: darkcyan;
+    grid-area: right-top;
+    @include tablets {
+        grid-area: top;
+    }
+}
+
+.slider__down {
+    background-color: greenyellow;
+    grid-area: r-bot-l;
+    @include tablets {
+        grid-area: bot-l;
+    }
+}
+
+.slider__up {
+    grid-area: r-bot-r;
+    background-color: blueviolet;
+    @include tablets {
+        grid-area: bot-r;
+    }
 }

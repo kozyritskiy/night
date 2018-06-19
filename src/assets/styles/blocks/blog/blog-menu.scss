@@ -2,6 +2,9 @@
     width: 50%;
     position: sticky;
     top: 10px;
+    @include laptop {
+        width: 80%;
+    }
 }
 
 .blog-menu__list {
@@ -25,6 +28,7 @@
         font-size: 16px;
         font-weight: 700;
     }
+    
 }
 
 .blog-menu__item_active>.blog-menu__link {

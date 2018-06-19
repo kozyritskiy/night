@@ -10,4 +10,7 @@
     display: block;
     fill: rgba(6, 7, 26, 0.7);
     stroke: rgba(6, 7, 26, 0.7);
+    @include tablets{
+        height: 200px;
+    }
 }

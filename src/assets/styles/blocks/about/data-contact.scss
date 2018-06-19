@@ -1,3 +1,20 @@
+.data-contact {
+    @include phones {
+        width: 100%;
+    }
+}
+
+.data-contact__list {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    @include phones{
+        align-items: center;
+    }
+}
+
 .data-contact__span {
     color: #b1b2b5;
     font-size: 16px;

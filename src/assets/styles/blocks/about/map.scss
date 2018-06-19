@@ -1,15 +1,32 @@
 .map {
-  background-color: cadetblue;
-  position: relative;
+    background-color: cadetblue;
+    position: relative;
+    min-height: 650px;
+    height: 1115px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    @include tablets {
+        height: 975px;
+    }
+    @include small-phones{
+        height: 1115px;
+    }
 }
 
 .map__data {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 580px;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  padding-top: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 580px;
+    padding-top: 35px;
+    border-radius: 15px;
+    margin-top: 330px;
+    @include tablets {
+        width: 350px;
+        margin-top: 160px;
+    }
+    @include small-phones {
+        margin-top: 0;
+        width: 100%;
+        border-radius: 0;
+    }
 }

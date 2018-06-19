@@ -1,24 +1,78 @@
 .column {
-  width: 100%;
+    width: 100%;
 }
 
 .column__list {
-  width: 100%;
-  display: flex;
-  padding: 30px 0;
+    width: 100%;
+    display: flex;
+    padding: 30px 0;
+    @include tablets {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 100px;
+        grid-template-areas: "footer-up footer-up" "footer-left footer-right";
+        padding: 30px 30px 20px 30px;
+    }
+    @include phones {
+        padding-top: 0;
+        padding-bottom: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 100px 120px;
+        grid-template-areas: "footer-top" "footer-mid" "footer-bot";
+    }
 }
 
 .column__item {
-  width: 33%;
-  padding: 0 30px;
-  &:nth-child(2) {
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-  }
+    width: 100%;
+    padding: 0 30px;
+    &:nth-child(2) {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    @include tablets {
+        padding: 0;
+        &:nth-child(1) {
+            grid-area: footer-up;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        &:nth-child(2) {
+            padding-top: 10px;
+            grid-area: footer-left;
+            border: none;
+        }
+        &:nth-child(3) {
+            padding-top: 10px;
+            grid-area: footer-right;
+        }
+    }
+    @include phones {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(1) {
+            grid-area: footer-top;
+            border: none;
+        }
+        &:nth-child(2) {
+            padding-top: 0;
+            grid-area: footer-mid;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            flex-direction: column;
+        }
+        &:nth-child(3) {
+            padding-top: 0;
+            grid-area: footer-bot;
+        }
+    }
 }
 
 .column__item p {
-  color: #b1b2b5;
-  font-size: 16px;
-  font-weight: 300;
+    color: #b1b2b5;
+    font-size: 16px;
+    font-weight: 300;
+    @include tablets {
+        text-align: center;
+    }
 }

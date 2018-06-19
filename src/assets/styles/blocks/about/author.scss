@@ -1,10 +1,10 @@
 .author {
     position: relative;
     height: 100%;
-}
-
-.author__bg {
-    position: absolute;
+    @include tablets {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .author__data {
@@ -17,28 +17,37 @@
 .author__icon {
     width: 460px;
     height: 270px;
+    @include tablets {
+        width: 281px;
+        height: 166px;
+    }
 }
 
 .author__avatar {
     width: 140px;
+    height: 140px;
     margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .author__img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .author__name,
 .author__info {
     text-align: center;
     color: rgba(255, 255, 255);
+    @include phones {}
 }
 
 .author__name {
     font-size: 35px;
     font-weight: 500;
+    @include phones {}
 }
 
 .author__info {

@@ -1,24 +1,40 @@
 .menu {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
+    @include tablets {
+        margin-bottom: 20px;
+    }
+    @include phones {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
 
 .menu__list {
-  display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding-right: -20px;
+    @include tablets {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include phones {
+        width: 100%;
+    }
 }
 
 .menu__item {
-  padding-right: 40px;
-  &:last-child {
-    padding-right: 0;
-  }
+    padding-right: 20px;
+    @include tablets {
+        padding-right: 10px;
+    }
 }
 
 .menu__link {
-  color: #e5e5e6;
-  font-size: 15.77px;
-  font-weight: 700;
-  transition: 0.4s;
-  &:hover {
-    color: white;
-  }
+    color: #e5e5e6;
+    font-size: 15.77px;
+    font-weight: 700;
+    transition: 0.4s;
+    &:hover {
+        color: white;
+    }
 }

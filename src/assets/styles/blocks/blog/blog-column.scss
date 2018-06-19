@@ -1,19 +1,41 @@
 .blog-column {
-  display: flex;
-  padding-top: 50px;
+    display: flex;
+    padding-top: 50px;
+    @include tablets {
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .blog-column__nav,
 .blog-column__empty {
-  width: 25%;
+    width: 25%;
+}
+
+.blog-column__empty {
+    @include laptop {
+        width: 10%;
+    }
+    @include tablets {
+        display: none;
+    }
 }
 
 .blog-column__article {
-  width: 50%;
+    width: 50%;
+    @include laptop {
+        width: 65%;
+    }
+    @include tablets {
+        width: 95%;
+    }
 }
 
 .blog-column__nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablets {
+        display: none;
+    }
 }
