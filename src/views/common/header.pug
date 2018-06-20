@@ -2,7 +2,7 @@
     .socials
         +socials('socials', socials)
 .hamburger__hero
-    .hamburger 
+    .hamburger(v-on:click="change" v-bind:class="{open: isActive}")
         span
         span
         span

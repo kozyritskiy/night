@@ -9,6 +9,21 @@ block scripts
     script(src='about.bundle.js')
 
 block content
+    section.section.full-menu(v-if="show")
+        .container_full-menu
+            ul.full-menu__list
+                li.full-menu__item
+                    a(href="#").full-menu__link Мои работы
+                hr.full-menu__hr
+                li.full-menu__item
+                    a(href="#").full-menu__link Обо мне
+                hr.full-menu__hr
+                li.full-menu__item
+                    a(href="#").full-menu__link Блог
+                hr.full-menu__hr
+                li.full-menu__item
+                    a(href="#").full-menu__link Авторизация
+                hr.full-menu__hr
     section.section.hero
         include ../common/header
         .author__hero
