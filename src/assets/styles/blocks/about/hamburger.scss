@@ -1,5 +1,60 @@
-.hamburger__icon {
-  width: 40px;
-  height: 35px;
-  fill: $white;
+.hamburger {
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.hamburger {
+    &:hover span {
+        background: $beige;
+    }
+}
+
+.hamburger span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 100px;
+    transform-origin: center;
+    transition: all .4s;
+}
+
+.hamburger span {
+    &:nth-child(1) {
+        top: 0;
+    }
+}
+
+.hamburger span {
+    &:nth-child(2) {
+        top: 16px;
+    }
+}
+
+.hamburger span {
+    &:nth-child(3) {
+        top: 32px;
+    }
+}
+
+.hamburger.open span {
+    &:nth-child(1) {
+        transform: rotate(-135deg);
+        top: 20px;
+    }
+}
+
+.hamburger.open span {
+    &:nth-child(2) {
+        background-color: transparent;
+    }
+}
+
+.hamburger.open span {
+    &:nth-child(3) {
+        transform: rotate(135deg);
+        top: 20px;
+    }
 }
