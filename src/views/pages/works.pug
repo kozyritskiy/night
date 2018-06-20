@@ -6,7 +6,7 @@ block variables
     - var titleSite = 'Личный сайт разработчика';
 
 block scripts
-    script(src='about.bundle.js')
+    script(src='works.bundle.js')
 
 block content
     section.section.hero
@@ -31,12 +31,10 @@ block content
                 h1.work-title__title Мои работы
                 img(src="./assets/images/svg/stars2.1.svg", alt="galaxy").work-title__img
         
-    section.slider
+    section.slide
         +trapezoid('works')
-        .slider__left
-        .slider__right
-        .slider__down
-        .slider__up
+        #slider-component
+            
         
     section.feedback
         h1.feedback__title что обо мне говорят  
