@@ -1,126 +1,210 @@
 .about {
-  position: relative;
-  display: flex;
+    position: relative;
+    display: flex;
+    min-height: 650px;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .about__left,
 .about__right {
-  width: 50%;
-  padding-top: 20px;
+    width: 50%;
+    padding-top: 20px;
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .about__left {
-  background-color: $beigelight;
-  display: flex;
-  padding-right: 20px;
+    background-color: $beigelight;
+    display: flex;
+    padding-right: 20px;
+    padding-bottom: 45px;
+    @include laptop {
+        flex-direction: column;
+        padding-right: 0;
+    }
+    @include tablets {
+        background-color: $beige;
+    }
 }
 
 .about__right {
-  background-color: $beige;
+    background-color: $beige;
+    @include tablets {
+        background-color: $beigelight;
+    }
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .about__left-title,
 .about__left-content {
-  width: 50%;
+    width: 50%;
+    @include laptop {
+        width: 100%;
+    }
 }
 
 .about__left-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @include laptop {
+        margin-bottom: 60px;
+    }
+    @include tablets {
+        margin-top: 20px;
+    }
 }
 
 .block-title {
-  font-family: Sansus;
-  color: #474b57;
-  font-size: 62.94px;
-  font-weight: 400;
-  line-height: 0.8;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
+    font-family: Sansus;
+    color: #474b57;
+    font-size: 62.94px;
+    font-weight: 400;
+    line-height: 0.8;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
 }
 
 .title__icon {
-  transform: rotate(190deg);
-  position: absolute;
-  bottom: 87%;
-  width: 262px;
-  height: 170px;
+    transform: rotate(190deg);
+    position: absolute;
+    bottom: 87%;
+    width: 262px;
+    height: 170px;
+    @include laptop {
+        width: 185px;
+        height: 121px;
+        bottom: -60%;
+    }
 }
 
 .about__left-content {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-description__image {
+    @include laptop {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .user-description__avatar {
-  width: 445px;
-  height: 390px;
-  margin-bottom: 30px;
-  object-fit: cover;
+    width: 445px;
+    height: 390px;
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+.user-description__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-description__title {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .block-subtitle {
-  font-family: Sansus;
-  color: #474b57;
-  font-size: 35px;
-  font-weight: 400;
-  text-transform: uppercase;
-  display: flex;
-  padding-bottom: 15px;
+    font-family: Sansus;
+    color: #474b57;
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    padding-bottom: 15px;
 }
 
 .text-content {
-  font-family: Roboto;
-  color: #474b57;
-  font-size: 16px;
-  font-weight: 400;
+    font-family: Roboto;
+    color: #474b57;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.user-description__text {
+    @include laptop {
+        width: 445px;
+    }
+    @include phones {
+        width: 95%;
+    }
 }
 
 .user-description__text p {
-  &:first-child {
-    margin-bottom: 10px;
-  }
+    &:first-child {
+        margin-bottom: 10px;
+    }
 }
 
 .about__right {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 65px 0 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35px 45px 40px;
+    @include phones {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .about__right-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .block-subtitle_right {
-  width: 35%;
-  text-align: center;
-  line-height: 1;
-  padding-bottom: 25px;
+    width: 35%;
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 25px;
+    @include laptop {
+        width: 60%;
+    }
 }
 
 .about__right-description {
-  margin-bottom: 55px;
+    margin-bottom: 55px;
+    @include tablets {
+        width: 466px;
+    }
+    @include phones {
+        width: 95%;
+    }
+}
+
+.about__right-description p {
+    @include tablets {
+        text-align: center;
+    }
 }
 
 hr {
-  border: none;
-  background-color: rgba(71, 75, 87, 0.5);
-  width: 89px;
-  height: 3px;
+    border: none;
+    background-color: rgba(71, 75, 87, 0.5);
+    width: 89px;
+    height: 3px;
+}
+
+.about__right-content {
+    @include phones{
+        width: 100%;
+    }
 }

@@ -1,0 +1,42 @@
+.work-title {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.work-title__title {
+    font-family: Sansus;
+    color: rgba(255, 255, 255);
+    font-size: 62.94px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    @include laptop {
+        font-size: 52.94px;
+    }
+    @include tablets {
+        font-size: 42.94px;
+    }
+    @include phones {
+        font-size: 32.94px;
+    }
+}
+
+.work-title__img {
+    transform: rotate(190deg);
+    width: 263px;
+    height: 170px;
+    @include laptop {
+        width: 200px;
+        height: 130px;
+    }
+    @include tablets {
+        width: 166px;
+        height: 109px;
+    }
+}

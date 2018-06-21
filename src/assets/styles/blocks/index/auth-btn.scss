@@ -2,4 +2,11 @@
     position: absolute;
     top: 2%;
     right: 5%;
+    @include laptop {
+        right: 1%;
+    }
+    @include phones {
+        right: 50%;
+        margin-right: -90px;
+    }
 }

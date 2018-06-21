@@ -6,12 +6,28 @@ block variables
     - var titleSite = 'Личный сайт веб-разработчика';
 
 block scripts
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7QzCtnBcBXYgit0HsHVbgUAf55uZhanM")
     script(src='about.bundle.js')
 
 block content
+    include ../common/full-menu
     section.section.hero
         include ../common/header
-    section.section.about
+        .author__hero
+            .author
+                .author__bg
+                    img(src="./assets/images/svg/stars1.svg", alt="galaxy").author__icon
+                .author__data
+                    .author__avatar
+                        img.author__img(src="./assets/images/content/avatar-small.jpg", alt="photo__img")
+                    .author__desc
+                        .author__name #{titlePage}
+                        .author__info #{titleSite}
+        .down-btn__hero
+            .down-btn
+                a(href="#").down-btn__link
+                    +icon('portf_arrow_down', 'down-btn__icon')
+    section.about
         +triangles('about') 
         .about__left
             .about__left-title
@@ -35,47 +51,17 @@ block content
             .about__right-description.text-content
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit mollitia nemo reprehenderit ipsam corrupti deleniti, blanditiis sit magni fuga eveniet hic sint illo? Quae harum voluptatem optio ipsum blanditiis. 
             .about__right-content
-                - 
-                    var skills = [
-                        ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-                        ['Backend', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-                        ['Workflow', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-                    ]
-
-                ul.skills-list
-                    each skillsrow in skills
-                        li.skills-list__item.skills-row
-                            .skills-row__title #{skillsrow[0]}
-                            ul.skills-row__list
-                                each skill in skillsrow[1]
-                                    li.skills-row__item
-                                        figure.skill(data-percents="70")
-                                            svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                                                circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                                                circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                                            .skill__title #{skill[0]}
-    section.section.map
-        .google-map
+                #skills-container
+                    
+    section.map
+        .google-map#map
         .map__data
             .contacts
-                h2.contacts__title
+                h2.contacts__titles
                     .block-subtitle.block-subtitle_contacts Контакты
                     hr
                 .contacts__data
-                    ul.contacts__list
-                        - 
-                            var contacts = [
-                                ['skype', 'skype_kdn'],
-                                ['phone_n', '+7 342 23 23'],
-                                ['envelope_n', 'astahov@gmail.com'],
-                                ['map_n', 'Minsk, Pushna 23']
-                            ]
-                        each item in contacts
-                            li.contacts__item
-                                .contacts__icon
-                                    a(href=`${item[1]}`).contacts__link
-                                        +icon(item[0], 'contacts__icon-img')
-                                        .contacts__titles #{item[1]}
+                    +contacts('contacts', contacts)
                                          
         footer.footer
             include ../common/footer

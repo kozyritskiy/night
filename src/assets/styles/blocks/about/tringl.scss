@@ -1,34 +1,37 @@
 .triangles {
-  position: absolute;
-  bottom: 100%;
-  width: 100%;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
 }
 
 .triangles__svg {
-  position: relative;
-  width: 100%;
-  display: block;
-  fill: white;
+    position: relative;
+    width: 100%;
+    display: block;
+    fill: white;
 }
 
 .triangles-about {
-  .triangles__svg {
-    &-left {
-      fill: $beigelight;
+    .triangles__svg {
+        &-left {
+            fill: $beigelight;
+            @include tablets {
+                fill: $beige;
+            }
+        }
+        &-right {
+            fill: $beige;
+        }
     }
-    &-right {
-      fill: $beige;
-    }
-  }
 }
 
 .triangles-blog {
-  .triangles__svg {
-    &-left {
-      fill: $beige;
+    .triangles__svg {
+        &-left {
+            fill: $beige;
+        }
+        &-right {
+            fill: $beige;
+        }
     }
-    &-right {
-      fill: $beige;
-    }
-  }
 }

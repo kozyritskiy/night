@@ -2,6 +2,9 @@
     width: 50%;
     position: sticky;
     top: 10px;
+    @include laptop {
+        width: 80%;
+    }
 }
 
 .blog-menu__list {
@@ -13,9 +16,29 @@
 .blog-menu__item {
     padding: 15px 15px 15px 0;
     margin-bottom: 25px;
+    transition: 0.4s;
     &:last-child {
         margin-bottom: 0;
     }
+    &:hover {
+        border-right: 3px solid rgba(8, 60, 150, 0.85);
+    }
+    &:hover>.blog-menu__link {
+        color: rgba(8, 60, 150, 0.85);
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+}
+
+.blog-menu__item_active>.blog-menu__link {
+    color: rgba(8, 60, 150, 0.85);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.blog-menu__item_active {
+    border-right: 3px solid rgba(8, 60, 150, 0.85);
 }
 
 .blog-menu__link {

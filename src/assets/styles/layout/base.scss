@@ -1,44 +1,59 @@
 * {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 *:before,
 *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+:root {
+    font-size: 16Px;
+    @include laptop {
+        font-size: 15Px;
+    }
+    @include tablets {
+        font-size: 14Px;
+    }
+    @include phones {
+        font-size: 13Px;
+    }
+    @include small-phones {
+        font-size: 12Px;
+    }
 }
 
 body,
 html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 16px;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  line-height: 1.42;
-  color: $dark;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    line-height: 1.42;
+    color: $dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  text-decoration: none;
-  display: flex;
+    text-decoration: none;
+    display: flex;
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-  li {
-    list-style: none;
-  }
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
 }
 
 h1,
@@ -47,28 +62,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
-  margin: 0;
+    font-weight: normal;
+    margin: 0;
 }
 
 p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 button {
-  border: 0;
-  cursor: pointer;
+    border: 0;
+    cursor: pointer;
 }
 
 img,
 embed,
 object,
 video {
-  max-width: 100%;
+    max-width: 100%;
 }

@@ -9,36 +9,31 @@ block scripts
     script(src='about.bundle.js')
 
 block content
+    include ../common/full-menu
     section.section.hero
         include ../common/header
+        .author__hero
+            .author
+                .author__bg
+                    img(src="./assets/images/svg/stars1.svg", alt="galaxy").author__icon
+                .author__data
+                    .author__avatar
+                        img.author__img(src="./assets/images/content/avatar-small.jpg", alt="photo__img")
+                    .author__desc
+                        .author__name.author__name_blog #{titlePage}
+                        .author__info #{titleSite}
+        .down-btn__hero
+            .down-btn
+                a(href="#").down-btn__link
+                    +icon('portf_arrow_down', 'down-btn__icon')
     section.blog
-        - 
-            var post = [
-                'Самое важное в SASS', 
-                "Самое важное в LESS", 
-                "Самое важное в Ruby", 
-                "Самое важное в NMP YARN BOWER BREW"
-            ]
         +triangles('blog')
         .blog-column
             .blog-column__nav
-                nav.blog-menu  
-                    ul.blog-menu__list
-                        each item in post
-                            li.blog-menu__item
-                                a(href="#").blog-menu__link #{item} 
+                +nav('blog-menu', post, 0)
             .blog-column__article
                 .post
-                    ul.post__list
-                        each item in post
-                            li.post__item
-                                .post__title
-                                    h3 #{item}
-                                time.post__date 22 ноября 2018
-                                .post__text 
-                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe veritatis impedit expedita unde. Sapiente sed dolorum eligendi dolore, ex, natus nam magni eius sit, ad cum quidem! Laboriosam, ut? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis repudiandae ratione, sapiente expedita, et asperiores odio obcaecati repellendus, quod id ex nobis. Adipisci ut reprehenderit pariatur facere et, nemo odit?
-                                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem rerum ipsam minus hic quis ducimus distinctio quae molestiae, reiciendis aspernatur similique vero. Veritatis reprehenderit, nam tempore eveniet quos sint error? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officiis, nulla accusantium rerum impedit laborum magni sint tenetur inventore labore animi voluptate? Laboriosam debitis alias asperiores assumenda nihil quasi repudiandae!
-
+                    +post('post', post)
             .blog-column__empty 
         footer.footer-blog
             include ../common/footer

@@ -1,0 +1,56 @@
+.feedback {
+    background-image: url("./assets/images/content/pharos.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback__title {
+    font-family: Sansus;
+    color: rgba(255, 255, 255);
+    font-size: 62.94px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 70px;
+    margin-bottom: 70px;
+    @include phones {
+        font-size: 42.94px;
+    }
+}
+
+.feedback__teachers {
+    margin-bottom: 70px;
+}
+
+.feedback__communication {
+    width: 380px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.title-fb {
+    font-family: Sansus;
+    color: rgba(255, 255, 255);
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px 0 30px 0;
+    line-height: 0.8;
+}
+
+.feedback__hr {
+    margin-bottom: 30px;
+}
+
+.feedback__btn {
+    margin-bottom: 70px;
+}

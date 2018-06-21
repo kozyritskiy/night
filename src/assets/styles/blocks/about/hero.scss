@@ -1,38 +1,60 @@
 .hero {
-  background-image: url("./assets/images/content/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
-  position: relative;
+    background-image: url("./assets/images/content/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
 }
 
 .socials__hero {
-  position: absolute;
-  top: 35px;
-  left: 35px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
 }
 
 .hamburger__hero {
-  position: absolute;
-  top: 30px;
-  right: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 999;
 }
 
 .author__hero {
-  width: 460px;
-  position: absolute;
-  top: 13%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+    width: 460px;
+    position: absolute;
+    top: 13%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    @include phones {
+        width: 100%;
+    }
 }
 
 .down-btn__hero {
-  width: 26px;
-  position: absolute;
-  bottom: 5%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+    width: 26px;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.down-btn__works {
+    width: 26px;
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.hero__works {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
 }
