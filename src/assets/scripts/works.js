@@ -1,2 +1,3 @@
-import "./modules/slider";
 import "./modules/full-menu";
+import "./modules/slider";
+
