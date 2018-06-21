@@ -58,3 +58,9 @@
         top: 20px;
     }
 }
+.static{
+    overflow: hidden;
+}
+[v-cloak]{
+    display: none;
+}
