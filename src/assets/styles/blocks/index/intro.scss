@@ -5,12 +5,6 @@
     position: relative;
     overflow: hidden;
     perspective: 1000px;
-    &:hover .intro__welcome {
-        transform: rotateY(180deg);
-    }
-    &:hover .intro__auth {
-        transform: rotateY(360deg);
-    }
 }
 
 .intro__welcome,
@@ -29,6 +23,7 @@
     flex-direction: column;
     justify-content: flex-end;
     background-color: rgba(28, 31, 41, 0.5);
+    transform: rotateY(0deg);
 }
 
 .intro__auth {
@@ -38,4 +33,15 @@
     justify-content: flex-end;
     border-radius: 15px;
     transform: rotateY(180deg);
+}
+
+.rotate__auth {
+    transform: rotateY(360deg);
+}
+
+.rotate__welc {
+    transform: rotateY(180deg);
+}
+.hide{
+    display: none;
 }
