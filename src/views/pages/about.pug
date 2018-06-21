@@ -6,6 +6,7 @@ block variables
     - var titleSite = 'Личный сайт веб-разработчика';
 
 block scripts
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7QzCtnBcBXYgit0HsHVbgUAf55uZhanM")
     script(src='about.bundle.js')
 
 block content
@@ -67,7 +68,7 @@ block content
                 #skills-container
                     
     section.map
-        .google-map
+        .google-map#map
         .map__data
             .contacts
                 h2.contacts__titles
