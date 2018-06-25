@@ -23,7 +23,14 @@ template#slider-left
             .slider__info-title
                 .block-subtitle {{work.title}}
                 hr.slider__info-hr
-            .slider__info-skills {{work.skills}}
+            transition-group(
+                apper
+                :css="false"
+                @before-enter="callback('before-enter')"
+                @after-enter="callback('after-enter')"
+                @enter="enterHandler"
+            )
+                .slider__info-skills(:key="work.skills") {{work.skills}}
             .slider__info-btn
                 a(:href="work.link" target="_blank").slider__info-link Посмотреть сайт
 
@@ -34,11 +41,13 @@ template#slider-right
 template#slider-down
     .slider__down
         .slider__button.slider__button_prev(@click="slide('prev')")
-            .slider__button-wrap
-                img(:src="getImageDown().photo", alt="").slider__button-pic
+            transition-group(name="slide-down" tag="div").slider__button-img-container
+                .slider__button-wrap(:key="getImageDown().photo")
+                    img(:src="getImageDown().photo", alt="").slider__button-pic
 
 template#slider-up
     .slider__up
         .slider__button.slider__button_next(@click="slide('next')")
-            .slider__button-wrap
-                img(:src="getImageUp().photo", alt="").slider__button-pic
+            transition-group(name="slide-up" tag="div").slider__button-img-container
+                .slider__button-wrap(:key="getImageUp().photo")
+                    img(:src="getImageUp().photo", alt="").slider__button-pic

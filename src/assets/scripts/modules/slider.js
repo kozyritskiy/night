@@ -4,6 +4,41 @@ let sliderLeft = {
   template: "#slider-left",
   props: {
     work: Object
+  },
+  methods: {
+    callback(eventName) {},
+    enterHandler(el, done) {
+      let setence = el.innerText.trim();
+      let wrapped = setence
+        .split("")
+        .map(item => {
+          return `
+          <span class="${item === " " ? "whitespace" : ""}">${item}</span>
+          `;
+        })
+        .join("");
+      el.innerHTML = wrapped;
+
+      let words = Array.from(el.children);
+      let i = 0;
+
+      function animate(words) {
+        let currentLetter = words[i];
+
+        let timer = setTimeout(() => {
+          animate(words);
+        }, 20);
+
+        currentLetter.classList.add("bounceIn");
+        i++;
+
+        if (i >= words.length) {
+          clearTimeout(timer);
+        }
+      }
+      animate(words);
+      done();
+    }
   }
 };
 
@@ -77,7 +112,6 @@ new Vue({
       if (value < 0) {
         this.currentIndex = worksAmount;
       }
-      console.log(value);
       this.currentWork = this.works[value];
     }
   },
@@ -95,7 +129,6 @@ new Vue({
           this.currentIndex = this.currentIndex - 1;
           break;
       }
-      console.log(direction);
     }
   },
   template: "#slider"
