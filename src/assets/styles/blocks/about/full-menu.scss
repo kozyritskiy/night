@@ -1,8 +1,13 @@
 .full-menu {
     position: fixed;
     z-index: 100;
-    top: 0;
+    top: -100%;
     background-color: rgba(24, 54, 105, 0.87);
+    transition: 1.6s;
+}
+
+.full-menu_active {
+    top: 0;
 }
 
 .container_full-menu {

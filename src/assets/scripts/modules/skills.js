@@ -2,11 +2,6 @@ import Vue from "vue";
 
 const skill = {
   template: "#skill",
-  data: function() {
-    return {
-      dash: 251
-    };
-  },
   props: {
     skillName: String,
     skillPercents: Number
@@ -14,37 +9,23 @@ const skill = {
   methods: {
     drawCircle() {
       const circle = this.$refs["color-circle"];
+      let abc = this.$root.find();
       const dashOffset = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
       );
-      const persents = (251 / 100) * (100 - this.skillPercents);
-
-      circle.style.strokeDashoffset = persents;
-      // this.dash = 100;
-      console.log(persents);
-      console.log(this.dash);
-    },
-    handleScroll() {
-      const height = document.documentElement.clientHeight / 2;
-      const el = document.getElementById("myskill");
-      console.log("scroll: " + window.pageYOffset);
-
-      console.log("positionTop: " + el.getBoundingClientRect().top);
-      console.log("visota: " + height);
-      if (height > el.getBoundingClientRect().top) {
-        this.dash = 100;
-        this.drawCircle();
-      }
+      const persents = (dashOffset / 100) * (100 - this.skillPercents);
+      window.addEventListener("scroll", function() {
+        const posTop = abc.foo.getBoundingClientRect().top;
+        const exactTop = posTop.toFixed();
+        console.log(exactTop);
+        if (exactTop > 100 && exactTop < 320) {
+          circle.style.strokeDashoffset = persents;
+        }
+      });
     }
   },
   mounted() {
-    // this.drawCircle();
-  },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed: function() {
-    window.removeEventListener("scroll", this.handleScroll);
+    this.drawCircle();
   }
 };
 
@@ -69,6 +50,14 @@ new Vue({
   created() {
     const data = require("../../../data/skills.json");
     this.skills = data;
+  },
+  methods: {
+    find() {
+      let circle = this.$refs["skills-list"];
+      return {
+        foo: circle
+      };
+    }
   },
   template: "#skills-list"
 });
