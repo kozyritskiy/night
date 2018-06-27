@@ -1,0 +1,78 @@
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/images/content/night_prel_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    z-index: 1;
+    transition: 1s all;
+    visibility: visible;
+    opacity: 1;
+    &.done {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader__figure {
+    width: 100px;
+    height: 100px;
+    stroke: white;
+    fill: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader__big-circle {
+    stroke: white;
+     animation: 2s spin infinite ease;
+}
+
+.preloader__little-circle {
+    stroke: white;
+    stroke-dasharray: 160;
+    stroke-dashoffset: 0; 
+    animation: 2s stroke infinite linear;
+}
+
+.loader__text{
+    font-size: 20px;
+
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-45%);
+}
+ @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes stroke {
+    from {
+        stroke-dashoffset: 160;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
