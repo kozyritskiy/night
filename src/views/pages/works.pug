@@ -10,7 +10,7 @@ block scripts
 
 block content
     include ../common/full-menu
-    section.section.hero
+    section.section.hero#up
         include ../common/header
         .author__hero
             .author
@@ -24,7 +24,7 @@ block content
                         .author__info #{titleSite}
         .down-btn__works
             .down-btn
-                a(href="#").down-btn__link
+                a(href="down").down-btn__link
                     +icon('portf_arrow_down', 'down-btn__icon')
 
         .hero__works
@@ -32,7 +32,7 @@ block content
                 h1.work-title__title Мои работы
                 img(src="./assets/images/svg/stars2.1.svg", alt="galaxy").work-title__img
         
-    section.slide
+    section.slide#down
         +trapezoid('works')
         #slider-component
             
@@ -64,7 +64,7 @@ block content
 
         .feedback__btn
             .up-btn
-                a(href="#").up-btn__link
+                a(href="up").up-btn__link
                     +icon('portf_arrow_up', 'up-btn__icon')
         footer.footer-blog
             include ../common/footer
