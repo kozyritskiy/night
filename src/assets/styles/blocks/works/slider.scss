@@ -78,14 +78,17 @@
     text-transform: uppercase;
     margin-bottom: 40px;
     font-size: 0;
-    span{
+    span {
         font-size: 16px;
         display: inline-block;
-        &.whitespace{
-            &:after{
-               content: "\00a0"; 
+        &.whitespace {
+            &:after {
+                content: "\00a0";
             }
         }
+    }
+    @include phones {
+        margin-bottom: 20px;
     }
 }
 
@@ -163,6 +166,16 @@
     display: block;
     max-width: 90%;
     max-height: 90%;
+}
+
+.block-subtitle_slider {
+    text-align: center;
+    @include tablets {
+        font-size: 30px;
+    }
+    @include phones {
+        font-size: 20px;
+    }
 }
 
 .slider__button-img-container {

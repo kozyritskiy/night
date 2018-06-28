@@ -9,6 +9,7 @@ block scripts
     script(src='works.bundle.js')
 
 block content
+    include ../common/preloader
     include ../common/full-menu
     section.section.hero#up
         include ../common/header
@@ -46,7 +47,7 @@ block content
         .feedback__communication
             h2.title-fb связаться со мной
             hr.feedback__hr
-            form(action="" method="").form-fb
+            form(action="mail.php" method="post").form-fb#form-main
                 fieldset.form-fb__fs
                     .name-fb
                         input(required type="text" name="name-fb").name-fb__input#name 
