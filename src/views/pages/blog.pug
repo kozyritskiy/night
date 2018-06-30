@@ -6,9 +6,10 @@ block variables
     - var titleSite = 'Статьи, которые я написал';
 
 block scripts
-    script(src='about.bundle.js')
+    script(src='blog.bundle.js')
 
 block content
+    include ../common/preloader
     include ../common/full-menu
     section.section.hero
         include ../common/header
@@ -24,9 +25,9 @@ block content
                         .author__info #{titleSite}
         .down-btn__hero
             .down-btn
-                a(href="#").down-btn__link
+                a(href="down").down-btn__link
                     +icon('portf_arrow_down', 'down-btn__icon')
-    section.blog
+    section.blog#down
         +triangles('blog')
         .blog-column
             .blog-column__nav

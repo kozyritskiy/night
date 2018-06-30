@@ -13,7 +13,7 @@ html(lang="ru")
     link(rel='stylesheet' href='main.min.css')
   body
     .wrapper
-      .maincontent#app(v-bind:class="{static: isActive}")
+      .maincontent
         block content
 
     include ./components/entry.pug 

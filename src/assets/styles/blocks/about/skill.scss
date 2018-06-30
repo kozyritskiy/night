@@ -22,9 +22,10 @@
 }
 
 .skill__circle_above {
+    transition: 3s;
     stroke: $blue;
     stroke-dasharray: 251;
-    stroke-dashoffset: 200;
+    stroke-dashoffset: 251;
 }
 
 .skill__title {

@@ -1,5 +1,8 @@
 import "./modules/skills";
-import "./modules/full-menu";
+import fullMenu from "./modules/full-menu";
 import initMap from "./modules/map";
+import arrowScrollDown from "./modules/arrow-down";
 
 initMap();
+fullMenu();
+arrowScrollDown();

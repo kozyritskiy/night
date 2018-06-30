@@ -22,7 +22,8 @@ mixin nav(className, items, activeItem)
     ul(class=`${className}__list`)
       each item, ndx in items
         li(class=`${className}__item` + ( (ndx === activeItem) ? ` ${className}__item_active` : '' ) )
-          a(class=`${className}__link` href='#') #{item[0]}
+          a(class=`${className}__link` href=`post${ndx}`) #{item[0]}
+    a(href="#").blog-column__anchor
 
 mixin navWelcome(className, items)
   nav(class=`${className}`)
@@ -33,8 +34,8 @@ mixin navWelcome(className, items)
 
 mixin post(className, items)
   ul(class=`${className}__list`)
-    each item in items
-      li(class=`${className}__item`)
+    each item,index in items
+      li(class=`${className}__item` id=`post${index}`)
         .post__title
           h3 #{item[0]}
         time.post__date #{item[1]}
@@ -123,3 +124,4 @@ mixin skill(skills)
 // +teacher('teachers','teacher', teacher, image)
 // +navWelcome('nav-welc', welc)
 // +skill(skills)
+

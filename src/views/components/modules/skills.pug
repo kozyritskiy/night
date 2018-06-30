@@ -1,5 +1,5 @@
 template#skills-list
-  ul.skills-list
+  ul.skills-list(ref="skills-list")
     li.skills-row.skills-list__item(v-for="skill in skills")
       skills-row(
         :skill="skill"

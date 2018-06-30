@@ -9,12 +9,19 @@ const skill = {
   methods: {
     drawCircle() {
       const circle = this.$refs["color-circle"];
+      let abc = this.$root.find();
       const dashOffset = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
       );
       const persents = (dashOffset / 100) * (100 - this.skillPercents);
-
-      circle.style.strokeDashoffset = persents;
+      window.addEventListener("scroll", function() {
+        const posTop = abc.foo.getBoundingClientRect().top;
+        const exactTop = posTop.toFixed();
+        console.log(exactTop);
+        if (exactTop > 100 && exactTop < 320) {
+          circle.style.strokeDashoffset = persents;
+        }
+      });
     }
   },
   mounted() {
@@ -43,7 +50,14 @@ new Vue({
   created() {
     const data = require("../../../data/skills.json");
     this.skills = data;
-    console.log(data);
+  },
+  methods: {
+    find() {
+      let circle = this.$refs["skills-list"];
+      return {
+        foo: circle
+      };
+    }
   },
   template: "#skills-list"
 });

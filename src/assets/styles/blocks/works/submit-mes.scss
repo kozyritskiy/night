@@ -1,0 +1,59 @@
+.wrap-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(63, 66, 68, .92);
+    z-index: 2;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.message {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    color: black;
+    z-index: 5;
+    margin-top: 900px;
+    @include phones {
+        margin-top: 1200px;
+    }
+}
+
+.message_submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message__submit {
+    color: rgba(71, 75, 87, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.message_submit {
+    max-width: 250px;
+    padding-bottom: 10px;
+}
+
+.button_close {
+    padding: 11px 20px 11px 20px;
+    border-radius: 5px;
+    background-color: #0548be;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}

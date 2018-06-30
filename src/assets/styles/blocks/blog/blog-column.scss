@@ -1,6 +1,7 @@
 .blog-column {
     display: flex;
     padding-top: 50px;
+    position: relative;
     @include tablets {
         align-items: center;
         justify-content: center;
@@ -36,6 +37,46 @@
     flex-direction: column;
     align-items: center;
     @include tablets {
-        display: none;
+        transition: 2s;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 40%;
+        margin: 0;
+        left: -40%;
+        max-width: none;
+        background-color: #253468;
+        align-items: flex-end;
+        z-index: 10;
+    }
+    @include phones {
+        width: 50%;
+        left: -50%;
+    }
+    &.blog-column_nav_active {
+        @include tablets {
+            transition: 2s;
+            left: 0;
+        }
+    }
+}
+
+.blog-column__anchor {
+    display: none;
+    @include tablets {
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: 140%;
+        transform: translateY(-50%);
+        right: -0.75rem;
+        width: 54px;
+        height: 54px;
+        background-color: #253468;
+        border-radius: 50%;
+    }
+    @include phones {
+        top: 120%;
     }
 }
