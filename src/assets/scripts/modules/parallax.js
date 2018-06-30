@@ -1,5 +1,5 @@
 let parallaxContainer = document.querySelector(".welcome");
-let layer = parallaxContainer.firstElementChild;
+let layer = document.querySelector(".parallax");
 let parallaxImg = document.querySelector(".parallax__img");
 
 let moveLayers = function(e) {
