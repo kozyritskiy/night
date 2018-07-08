@@ -14,5 +14,8 @@ html(lang="en")
     include ./common/preloader
     block content
 
+    include ./components/entry.pug 
+
     script(src="bootloader.bundle.js")
+    script(src='vendor.bundle.js')
     script(src="auth.bundle.js")
